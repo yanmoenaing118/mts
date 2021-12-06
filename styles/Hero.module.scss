@@ -1,0 +1,29 @@
+.hero {
+  background-color: var(--primary-color);
+  height: calc(100vh - 80px);
+  width: 100%;
+  color: var(--text-white);
+
+  &_wrapper {
+    padding: 1.3em;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    // line-height: ;
+    // margin-top: -10%;
+
+    h1 {
+      font-size: 4.2vw;
+      font-weight: bold;
+      margin-bottom: 0.8em;
+    }
+
+    & > div p {
+      font-size: 1.2rem;
+      width: 60%;
+      margin-bottom: 2em;
+    }
+  }
+}

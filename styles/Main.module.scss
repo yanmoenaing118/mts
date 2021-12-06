@@ -1,0 +1,28 @@
+.main {
+  &_box {
+    display: flex;
+    &__left {
+      flex: 1;
+    }
+
+    &__right {
+      flex: 1;
+    }
+
+    &__img {
+      width: 80%;
+    }
+  }
+
+  &_textbox {
+    padding: 1.3em;
+    h1 {
+      font-size: 2.6rem;
+    }
+    p {
+      margin: 2em 0;
+      line-height: 1.6;
+      font-size: 1.3rem;
+    }
+  }
+}

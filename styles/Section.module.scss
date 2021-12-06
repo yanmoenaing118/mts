@@ -1,0 +1,9 @@
+.section {
+  color: var(--primary-color);
+
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    padding: 8rem 0;
+  }
+}

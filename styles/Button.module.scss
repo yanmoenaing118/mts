@@ -1,0 +1,16 @@
+.btn {
+  background: none;
+  border: none;
+  outline: none;
+
+  color: var(--text-white);
+  padding: 0.8em 1.2em;
+  cursor: pointer;
+  text-transform: capitalize;
+
+  &_primary {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border: 1px solid var(--text-white);
+  }
+}
