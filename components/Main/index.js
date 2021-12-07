@@ -18,7 +18,7 @@ export default function Main(props) {
                 type="button"
                 className={`${btn_styles.btn} ${btn_styles.btn_primary}`}
               >
-                Become a translator
+                Translate a song
               </button>
             </div>
           </div>

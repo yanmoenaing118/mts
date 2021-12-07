@@ -7,7 +7,11 @@ export default function Hero() {
     <div className={styles.hero}>
       <Container>
         <div className={styles.hero_wrapper}>
-          <h1>We bring you the best translations of your favorite songs</h1>
+          <h1>
+            We bring you the best translations of{" "}
+            <span>your favorite songs</span>
+          </h1>
+
           <div>
             <p>
               We listen to music everyday. Not everyone of us actually

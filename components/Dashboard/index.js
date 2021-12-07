@@ -2,6 +2,9 @@ import { BiSearch } from "react-icons/bi";
 
 import styles from "./../../styles/Dashboard.module.scss";
 import Sidebar from "./Sidebar";
+import Tracks from "./Tracks";
+
+const songs = [];
 
 export default function Dashboard(pros) {
   return (
@@ -21,13 +24,7 @@ export default function Dashboard(pros) {
           </div>
           <div className={styles.dashboard_main_home}>
             <h2>Home</h2>
-            <div className={styles.tracks}>
-              <ul className={styles.tracks_list}>
-                <li>
-                  <div>song 1</div>
-                </li>
-              </ul>
-            </div>
+            <Tracks />
           </div>
         </div>
       </div>

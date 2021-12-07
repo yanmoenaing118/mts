@@ -1,6 +1,7 @@
 :root {
   --primary-color: #000;
   --secondary-color: green;
+  --tertiary: rgb(245, 60, 91);
 
   --text-white: #fff;
 }

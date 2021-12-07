@@ -9,6 +9,10 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>MTS</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Header />
       <Hero />
       <Main />
