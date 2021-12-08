@@ -32,13 +32,13 @@ $white: #fff;
         a {
           display: flex;
           align-items: center;
-          padding: 1em 0;
+          padding: 0.68em 0;
           padding-left: 2em;
           transition: all 0.3s ease-in-out;
 
           span {
             margin-left: 2em;
-            font-size: 1.2rem;
+            font-size: 0.9rem;
           }
 
           &:hover {
@@ -148,7 +148,6 @@ $white: #fff;
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 100;
         display: flex;
         align-items: center;
         justify-content: center;

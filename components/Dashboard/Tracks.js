@@ -80,10 +80,10 @@ function TrackItem({ title, artist, cover_src }) {
     <li>
       <div className={styles.tracks_item}>
         <div className={styles.tracks_item_cover}>
+          <Image src={cover_src} width={48} height={48} />
           <div className={styles.tracks_item_cover_play}>
             <GrCirclePlay size={30} fill="#fff" />
           </div>
-          <Image src={cover_src} width={48} height={48} />
         </div>
         <div className={styles.tracks_item_info}>
           <h3>{title}</h3>
