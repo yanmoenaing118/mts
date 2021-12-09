@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Dashboard from "../components/Dashboard";
 import Player from "../components/Player";
-import Tracks from "../components/Dashboard/Tracks";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "../components/Dashboard/Home";
+import Explore from "../components/Dashboard/Explore";
+import Artists from "../components/Dashboard/Artists";
+import DramaOsts from "../components/Dashboard/DramaOsts";
 export default function index() {
   return (
     <BrowserRouter>
@@ -11,8 +14,12 @@ export default function index() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Dashboard>
-        <h2>Home</h2>
-        <Tracks />
+        <Routes>
+          <Route path="dashboard" element={<Home />} />
+          <Route path="explore" element={<Explore />} />
+          <Route path="artists" element={<Artists />} />
+          <Route path="drama-osts" element={<DramaOsts />} />
+        </Routes>
       </Dashboard>
       <Player />
     </BrowserRouter>
