@@ -102,12 +102,13 @@
   bottom: 96px;
   left: 0;
   width: 100%;
-  height: calc(100% - 96px);
-  height: 0;
+  // height: calc(100% - 96px);
+  // height: 0;
+
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-
+  transition: all 0.3s ease;
   &_wrapper {
     overflow: hidden;
     max-width: 600px;
