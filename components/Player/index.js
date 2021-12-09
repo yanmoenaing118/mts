@@ -11,6 +11,7 @@ const lyrics = [
     lyric: "将军夫人",
     translations: {
       english: "The wind speaks with your tone",
+      burmese: "လေက မင်းရဲ့လေသံနဲ့ ပြောတတ်တယ်။",
     },
     starttime: "00:18.294",
     endtime: "00:21.599",
@@ -21,6 +22,7 @@ const lyrics = [
     endtime: "00:24.678",
     translations: {
       english: "Talking about the rain falling in the rain",
+      burmese: "မိုးတွေရွာနေတဲ့အကြောင်း ပြောနေတာ",
     },
   },
   {
@@ -29,6 +31,7 @@ const lyrics = [
     endtime: "00:28.625",
     translations: {
       english: "I pause in the dream",
+      burmese: "အိပ်မက်ထဲမှာ ခဏရပ်လိုက်တယ်။",
     },
   },
   {
@@ -37,6 +40,7 @@ const lyrics = [
     endtime: "00:31.930",
     translations: {
       english: "Counting the years of memory",
+      burmese: "အမှတ်ရစရာ နှစ်တွေကို ရေတွက်တယ်။",
     },
   },
   {
@@ -45,6 +49,7 @@ const lyrics = [
     endtime: "00:35.154",
     translations: {
       english: "Waiting for the passionate love",
+      burmese: "ချစ်ခြင်းမေတ္တာကို စောင့်မျှော်လျက်",
     },
   },
   {
@@ -53,6 +58,8 @@ const lyrics = [
     endtime: "00:39.180",
     translations: {
       english: "I'd trade a lifetime of prosperity for a life of suffering",
+      burmese:
+        "ဆင်းရဲဒုက္ခဘဝနဲ့ တစ်သက်လုံး ချမ်းသာအောင် ရောင်းဝယ်ဖောက်ကားချင်ပါတယ်။",
     },
   },
   {
@@ -61,6 +68,7 @@ const lyrics = [
     endtime: "00:46.144",
     translations: {
       english: "Drink a bottle of wine and seat up the story",
+      burmese: "ဝိုင်တစ်ပုလင်းသောက်ပြီး ဇာတ်လမ်းကို ထိုင်ကြည့်သည်။",
     },
   },
   {
@@ -69,6 +77,7 @@ const lyrics = [
     endtime: "00:50.505",
     translations: {
       english: "Love is the residual warmth of the world",
+      burmese: "အချစ်ဆိုတာ ကမ္ဘာကြီးရဲ့ ကျန်နေတဲ့ နွေးထွေးမှုပါ။",
     },
   },
   {
@@ -77,6 +86,7 @@ const lyrics = [
     endtime: "00:54.173",
     translations: {
       english: "The flowers bloom and fall leaving traces behind",
+      burmese: "ပန်းတွေ ပွင့်ပြီး ကြွေကျလို့ ခြေရာတွေ ချန်ထားရတယ်။",
     },
   },
   {
@@ -85,6 +95,7 @@ const lyrics = [
     endtime: "00:57.216",
     translations: {
       english: "Keep the innocence in the passing years",
+      burmese: "ဖြတ်သန်းလာခဲ့တဲ့ နှစ်တွေမှာ အပြစ်ကင်းစင်မှုကို ထိန်းသိမ်းပါ။",
     },
   },
   {
@@ -93,6 +104,7 @@ const lyrics = [
     endtime: "01:00.495",
     translations: {
       english: "Only for you",
+      burmese: "သင့်အတွက်သာ",
     },
   },
   {
@@ -101,6 +113,7 @@ const lyrics = [
     endtime: "01:05.058",
     translations: {
       english: "Love is the first spring in the wilderness",
+      burmese: "အချစ်ဆိုတာ တောထဲမှာ ပထမဆုံး နွေဦးရာသီပါ။",
     },
   },
   {
@@ -109,6 +122,7 @@ const lyrics = [
     endtime: "01:09.010",
     translations: {
       english: "Quietly open my heart",
+      burmese: "ငါ့နှလုံးသားကို တိတ်တိတ်လေး ဖွင့်ထားပါ",
     },
   },
   {
@@ -117,6 +131,7 @@ const lyrics = [
     endtime: "01:11.369",
     translations: {
       english: "No matter what happens",
+      burmese: "ဘာပဲဖြစ်​ဖြစ်​",
     },
   },
   {
@@ -125,6 +140,7 @@ const lyrics = [
     endtime: "01:15.306",
     translations: {
       english: "I'll always be loyal to you",
+      burmese: "ငါ မင်းအပေါ် အမြဲသစ္စာရှိမယ်။",
     },
   },
   {
@@ -133,6 +149,7 @@ const lyrics = [
     endtime: "01:38.848",
     translations: {
       english: "The palm print in the hand",
+      burmese: "လက်ထဲတွင် လက်ဖဝါးနှိပ်သည်။",
     },
   },
   {
@@ -141,6 +158,7 @@ const lyrics = [
     endtime: "01:42.784",
     translations: {
       english: "It messes with the thoughts",
+      burmese: "အတွေးတွေနဲ့ ရှုပ်နေတယ်။",
     },
   },
   {
@@ -149,6 +167,7 @@ const lyrics = [
     endtime: "01:46.360",
     translations: {
       english: "The endless gaze",
+      burmese: "အဆုံးမရှိသော အကြည့်",
     },
   },
   {
@@ -157,6 +176,7 @@ const lyrics = [
     endtime: "01:49.349",
     translations: {
       english: "In every morning and evening",
+      burmese: "မနက်တိုင်း ညနေတိုင်း",
     },
   },
   {
@@ -165,6 +185,7 @@ const lyrics = [
     endtime: "01:53.000",
     translations: {
       english: "Finding peace amidst the chaos",
+      burmese: "ပရမ်းပတာများကြားတွင် ငြိမ်းချမ်းမှုကို ရှာဖွေပါ။",
     },
   },
   {
@@ -173,6 +194,7 @@ const lyrics = [
     endtime: "01:56.961",
     translations: {
       english: "Happiness and sadness, even If it's only for a moment",
+      burmese: "ပျော်ရွှင်မှုနှင့် ဝမ်းနည်းမှုတို့သည် ခဏတာမျှသာ ဖြစ်လျှင်ပင်",
     },
   },
   {
@@ -181,6 +203,7 @@ const lyrics = [
     endtime: "02:03.592",
     translations: {
       english: "Leave it to the moon and tell the story",
+      burmese: "လကို ထားခဲ့ကာ ဇာတ်လမ်းကို ပြောပြပါ။",
     },
   },
   {
@@ -189,6 +212,7 @@ const lyrics = [
     endtime: "02:07.831",
     translations: {
       english: "Love is the residual warmth of the world",
+      burmese: "အချစ်ဆိုတာ ကမ္ဘာကြီးရဲ့ ကျန်နေတဲ့ နွေးထွေးမှုပါ။",
     },
   },
   {
@@ -197,6 +221,7 @@ const lyrics = [
     endtime: "02:11.631",
     translations: {
       english: "The flowers bloom and fall leaving trace behind",
+      burmese: "ပန်းတွေ ပွင့်ပြီး ကြွေကျလို့ ခြေရာတွေ ချန်ထား တယ်။",
     },
   },
   {
@@ -205,6 +230,7 @@ const lyrics = [
     endtime: "02:14.636",
     translations: {
       english: "Keep the innocence in the passing years",
+      burmese: "ဖြတ်သန်းလာခဲ့တဲ့ နှစ်တွေမှာ အပြစ်ကင်းစင်မှုကို ထိန်းသိမ်းပါ။",
     },
   },
   {
@@ -213,6 +239,7 @@ const lyrics = [
     endtime: "02:17.798",
     translations: {
       english: "Only for you",
+      burmese: "မင့်အတွက်သာ",
     },
   },
   {
@@ -221,6 +248,7 @@ const lyrics = [
     endtime: "02:22.669",
     translations: {
       english: "Love is the first spring in the wilderness",
+      burmese: "အချစ်ဆိုတာ တောထဲမှာ ပထမဆုံး နွေဦးရာသီပါ",
     },
   },
   {
@@ -229,6 +257,7 @@ const lyrics = [
     endtime: "02:26.599",
     translations: {
       english: "Quietly open my heart",
+      burmese: "ငါ့နှလုံးသားကို တိတ်တိတ်လေး ဖွင့်ထားပါ",
     },
   },
   {
@@ -237,6 +266,7 @@ const lyrics = [
     endtime: "02:28.636",
     translations: {
       english: "No matter what happens",
+      burmese: "ဘာပဲဖြစ်​ဖြစ်​",
     },
   },
   {
@@ -245,6 +275,7 @@ const lyrics = [
     endtime: "02:33.503",
     translations: {
       english: "I'll always be loyal to you",
+      burmese: "ငါ မင်းအပေါ် အမြဲသစ္စာရှိမယ်။",
     },
   },
   {
@@ -253,6 +284,7 @@ const lyrics = [
     endtime: "02:37.332",
     translations: {
       english: "Love is the residual warmth of the world",
+      burmese: "အချစ်ဆိုတာ ကမ္ဘာကြီးရဲ့ ကျန်နေတဲ့ နွေးထွေးမှုပါ။",
     },
   },
   {
@@ -261,6 +293,7 @@ const lyrics = [
     endtime: "02:40.974",
     translations: {
       english: "The flowers bloom and fall leaving traces behind",
+      burmese: "ပန်းတွေ ပွင့်ပြီး ကြွေကျလို့ ခြေရာတွေ ချန်ထားရတယ်။",
     },
   },
   {
@@ -269,6 +302,7 @@ const lyrics = [
     endtime: "02:44.369",
     translations: {
       english: "Keep the innocence in the passing years",
+      burmese: "ဖြတ်သန်းလာခဲ့တဲ့ နှစ်တွေမှာ အပြစ်ကင်းစင်မှုကို ထိန်းသိမ်းပါ။",
     },
   },
   {
@@ -277,6 +311,7 @@ const lyrics = [
     endtime: ":02:48.221",
     translations: {
       english: "Only for you",
+      burmese: "သင့်အတွက်သာ",
     },
   },
   {
@@ -285,6 +320,7 @@ const lyrics = [
     endtime: "02:52.113",
     translations: {
       english: "Love is the first spring in the wilderness",
+      burmese: "အချစ်ဆိုတာ တောထဲမှာ ပထမဆုံး နွေဦးရာသီပါ။",
     },
   },
   {
@@ -293,6 +329,7 @@ const lyrics = [
     endtime: "02:55.863",
     translations: {
       english: "Quietly open my heart",
+      burmese: "ငါ့နှလုံးသားကို တိတ်တိတ်လေး ဖွင့်ထားပါ။",
     },
   },
   {
@@ -301,6 +338,7 @@ const lyrics = [
     endtime: "02:58.472",
     translations: {
       english: "No matter what happens",
+      burmese: "ဘာပဲဖြစ်​ဖြစ်​",
     },
   },
   {
@@ -309,6 +347,7 @@ const lyrics = [
     endtime: "03:02.187",
     translations: {
       english: "I'll always be loyal to you",
+      burmese: "ငါ မင်းအပေါ် အမြဲသစ္စာရှိမယ်။",
     },
   },
 ];
@@ -316,8 +355,13 @@ const lyrics = [
 export default function Player() {
   const [currentTime, setCurrentTime] = useState(0);
   const [lyricParasPosition, setLyricParasPosition] = useState(0);
-  const [activeLyric, setActiveLyric] = useState(0);
+  const [activeLyric, setActiveLyric] = useState(null);
   const [showLyric, setShowLyric] = useState(false);
+  const [lyricHeight, setLyricHeight] = useState(60);
+  const [currentLanguage, setCurrentLanguage] = useState("none");
+
+  const avaliableLanguages = Object.keys(lyrics[0].translations);
+  avaliableLanguages.push("none");
 
   return (
     <div className={styles.footerPlayer}>
@@ -326,6 +370,8 @@ export default function Player() {
         activeLyric={activeLyric}
         showLyric={showLyric}
         lyrics={lyrics}
+        lyricHeight={lyricHeight}
+        currentLanguage={currentLanguage}
       />
 
       <div className={styles.footerPlayer_wrapper}>
@@ -336,7 +382,12 @@ export default function Player() {
           setLyricParasPosition={setLyricParasPosition}
           setActiveLyric={setActiveLyric}
         />
-        <Actions setShowLyric={setShowLyric} showLyric={showLyric} />
+        <Actions
+          setShowLyric={setShowLyric}
+          showLyric={showLyric}
+          setCurrentLanguage={setCurrentLanguage}
+          avaliableLanguages={avaliableLanguages}
+        />
       </div>
     </div>
   );

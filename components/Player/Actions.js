@@ -1,10 +1,19 @@
 import styles from "./../../styles/Player.module.scss";
 import { FaVolumeOff } from "react-icons/fa";
 
-export default function Actions({ showLyric, setShowLyric }) {
+export default function Actions({
+  showLyric,
+  setShowLyric,
+  avaliableLanguages,
+  setCurrentLanguage,
+}) {
   const showLyricHandler = () => {
-    console.log("HI");
     setShowLyric(!showLyric);
+  };
+
+  const seeTranslation = (e) => {
+    const lang = e.target.textContent;
+    setCurrentLanguage(lang);
   };
   return (
     <div className={styles.actions}>
@@ -13,6 +22,15 @@ export default function Actions({ showLyric, setShowLyric }) {
           <span>Lyric</span>
         </button>
         <button className={styles.tran}>
+          <ul>
+            {avaliableLanguages.map((lang) => {
+              return (
+                <li key={lang} onClick={seeTranslation}>
+                  {lang}
+                </li>
+              );
+            })}
+          </ul>
           <span>Translation</span>
         </button>
         <button>

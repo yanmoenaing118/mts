@@ -48,7 +48,7 @@ export default function Audio({
         controls
         onTimeUpdate={updateTimeHandler}
         loop
-        // style={{ display: "none" }}
+        style={{ display: "none" }}
         autoPlay={true}
         ref={audioRef}
       />

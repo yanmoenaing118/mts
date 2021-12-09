@@ -78,36 +78,58 @@
       color: #fff;
       display: flex;
       align-items: center;
-      padding: 0.4em 0.6em;
+
+      height: 30px;
+
+      // padding: 0 0.6em;
       cursor: pointer;
 
       &.tran {
+        padding: 0.4em 0.6em;
         border: 1px solid rgba(#fff, 0.6);
-      }
+        position: relative;
 
-      &:hover {
-        text-shadow: 0 0 2px #fff;
-      }
+        ul {
+          border: 1px solid rgba(#fff, 0.6);
+          display: none;
+          list-style: none;
+          position: absolute;
+          z-index: 1500;
 
-      // span {
-      //   margin-left: 1em;
-      // }
+          width: 100%;
+          bottom: 29px;
+          left: 0;
+
+          background-color: rgba(#fff, 0.55);
+          li {
+            padding: 0.3em 0.66em;
+            color: #000;
+            text-transform: capitalize;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        &:hover {
+          ul {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
 
 .lyric {
   position: fixed;
-  z-index: 3000;
+  z-index: 1000;
   bottom: 96px;
   left: 0;
   width: 100%;
-  // height: calc(100% - 96px);
-  // height: 0;
-
   background-color: rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   transition: all 0.3s ease;
   &_wrapper {
     overflow: hidden;
@@ -121,20 +143,18 @@
   }
 
   &_paras {
-    // background-color: rebeccapurple;
     width: 100%;
     min-height: 420px;
     overflow-y: hidden;
-    // transform: translateY(-60px);
     transition: transform 0.5s ease;
   }
 
   &_line {
-    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    flex-direction: column;
 
     &_active {
       background-color: rgba(#fff, 0.3);
