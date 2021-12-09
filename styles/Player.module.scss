@@ -52,11 +52,38 @@
   }
 
   &_progressbar {
-    width: 400px;
+    display: flex;
+    align-items: center;
 
-    height: 2px;
-    background-color: wheat;
+    width: 300px;
+    position: relative;
+    height: 3px;
+    background-color: white;
     margin: 0 1em;
+    cursor: pointer;
+
+    &_cursor {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      background-color: black;
+      height: 100%;
+      z-index: 200;
+    }
+
+    .progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3px;
+
+      // width: 40%;
+      background-color: rgb(31, 161, 118);
+    }
+
+    &:hover {
+      transform: scaleY(2);
+    }
   }
 }
 
