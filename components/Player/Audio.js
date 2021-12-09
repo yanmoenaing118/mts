@@ -17,6 +17,7 @@ export default function Audio({
   lyrics,
   setLyricParasPosition,
   setActiveLyric,
+  src,
 }) {
   const [currentTime, setCurrentTime] = useState(0);
   const [audioEndTime, setAudioEndTime] = useState(0);
@@ -82,7 +83,7 @@ export default function Audio({
   return (
     <div className={styles.player}>
       <audio
-        src="https://myplaylist.vercel.app/static/media/for_one_person.20cab8c7.mp3"
+        src={src}
         controls
         onTimeUpdate={updateTimeHandler}
         loop

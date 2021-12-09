@@ -6,7 +6,7 @@ import Tracks from "./Tracks";
 
 const songs = [];
 
-export default function Dashboard(pros) {
+export default function Dashboard(props) {
   return (
     <div className={styles.dashboard}>
       <div className={styles.dashboard_wrapper}>
@@ -22,10 +22,7 @@ export default function Dashboard(pros) {
               </div>
             </form>
           </div>
-          <div className={styles.dashboard_main_home}>
-            <h2>Home</h2>
-            <Tracks />
-          </div>
+          <div className={styles.dashboard_main}>{props.children}</div>
         </div>
       </div>
     </div>

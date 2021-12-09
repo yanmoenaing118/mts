@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "next/image";
 import { FcHome, FcOpenedFolder, FcAssistant, FcMusic } from "react-icons/fc";
 import styles from "./../../styles/Dashboard.module.scss";
@@ -15,43 +15,35 @@ export default function Sidebar() {
       <nav className={styles.dashboard_navlinks}>
         <ul>
           <li>
-            <Link href="/dashboard">
-              <a>
-                <div>
-                  <FcHome size={35} />
-                </div>
-                <span>Home</span>
-              </a>
+            <Link to="/dashboard">
+              <div>
+                <FcHome size={35} />
+              </div>
+              <span>Home</span>
             </Link>
           </li>
           <li>
-            <Link href="/#">
-              <a>
-                <div>
-                  <FcOpenedFolder size={35} />
-                </div>
-                <span>Explore</span>
-              </a>
+            <Link to="/explore">
+              <div>
+                <FcOpenedFolder size={35} />
+              </div>
+              <span>Explore</span>
             </Link>
           </li>
           <li>
-            <Link href="/#">
-              <a>
-                <div>
-                  <FcAssistant size={35} />
-                </div>
-                <span>Artists</span>
-              </a>
+            <Link to="/artists">
+              <div>
+                <FcAssistant size={35} />
+              </div>
+              <span>Artists</span>
             </Link>
           </li>
           <li>
-            <Link href="/#">
-              <a>
-                <div>
-                  <FcMusic size={35} />
-                </div>
-                <span>Drama OST</span>
-              </a>
+            <Link to="/drama-osts">
+              <div>
+                <FcMusic size={35} />
+              </div>
+              <span>Drama OST</span>
             </Link>
           </li>
         </ul>
