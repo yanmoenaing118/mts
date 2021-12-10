@@ -6,7 +6,10 @@ import Home from "../components/Dashboard/Home";
 import Explore from "../components/Dashboard/Explore";
 import Artists from "../components/Dashboard/Artists";
 import DramaOsts from "../components/Dashboard/DramaOsts";
+import { useSelector } from "react-redux";
 export default function index() {
+  const isPlayerOpen = useSelector((state) => state.player.showPlayer);
+  const playerSrc = useSelector((state) => state.player.src);
   return (
     <BrowserRouter>
       <Head>
@@ -21,7 +24,7 @@ export default function index() {
           <Route path="drama-osts" element={<DramaOsts />} />
         </Routes>
       </Dashboard>
-      <Player />
+      {isPlayerOpen && <Player src={playerSrc} />}
     </BrowserRouter>
   );
 }

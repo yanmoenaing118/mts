@@ -7,7 +7,7 @@ import { useState } from "react";
 import Lyric from "./Lyric";
 import { useSelector } from "react-redux";
 
-export default function Player() {
+export default function Player({ src }) {
   const [currentTime, setCurrentTime] = useState(0);
   const [lyricParasPosition, setLyricParasPosition] = useState(0);
   const [activeLyric, setActiveLyric] = useState(null);
@@ -15,10 +15,11 @@ export default function Player() {
   const [lyricHeight, setLyricHeight] = useState(60);
   const [currentLanguage, setCurrentLanguage] = useState("none");
 
-  const lyrics = useSelector((state) => state.songs.songs[0].lyrics);
-  const songSrc = useSelector((state) => state.songs.songs[0].src);
+  let avaliableLanguages = useSelector(
+    (state) => state.player.lyrics[0].translations
+  );
 
-  const avaliableLanguages = Object.keys(lyrics[0].translations);
+  avaliableLanguages = Object.keys(avaliableLanguages);
   avaliableLanguages.push("none");
 
   return (
@@ -27,7 +28,6 @@ export default function Player() {
         lyricParasPosition={lyricParasPosition}
         activeLyric={activeLyric}
         showLyric={showLyric}
-        lyrics={lyrics}
         lyricHeight={lyricHeight}
         currentLanguage={currentLanguage}
       />
@@ -35,11 +35,11 @@ export default function Player() {
       <div className={styles.footerPlayer_wrapper}>
         <Metadata />
         <Audio
-          lyrics={lyrics}
+          // lyrics={lyrics}
           setCurrentTime={setCurrentTime}
           setLyricParasPosition={setLyricParasPosition}
           setActiveLyric={setActiveLyric}
-          src={songSrc}
+          src={src}
         />
         <Actions
           setShowLyric={setShowLyric}

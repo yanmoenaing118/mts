@@ -1,13 +1,16 @@
+import { useSelector } from "react-redux";
 import styles from "./../../styles/Player.module.scss";
 
 export default function Lyric({
   lyricParasPosition,
   activeLyric,
   showLyric,
-  lyrics,
+
   lyricHeight,
   currentLanguage,
 }) {
+  const lyrics = useSelector((state) => state.player.lyrics);
+
   return (
     <div
       className={styles.lyric}

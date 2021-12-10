@@ -2,6 +2,7 @@ import styles from "./../../styles/Player.module.scss";
 import { FaStepForward, FaStepBackward, FaPlay, FaPause } from "react-icons/fa";
 import { BsFillSkipForwardFill, BsSkipBackwardFill } from "react-icons/bs";
 import { createRef, useState } from "react";
+import { useSelector } from "react-redux";
 
 function getTimeFormat(time) {
   const currentMinute = Math.floor(time / 60);
@@ -13,17 +14,14 @@ function getTimeFormat(time) {
   );
 }
 
-export default function Audio({
-  lyrics,
-  setLyricParasPosition,
-  setActiveLyric,
-  src,
-}) {
+export default function Audio({ setLyricParasPosition, setActiveLyric, src }) {
   const [currentTime, setCurrentTime] = useState(0);
   const [audioEndTime, setAudioEndTime] = useState(0);
   const [progressWidth, setProgressWidth] = useState(0);
   const [playing, setPlaying] = useState(false);
   const audioRef = createRef();
+
+  const lyrics = useSelector((state) => state.player.lyrics);
 
   const updateTimeHandler = (e) => {
     const currentTime = e.target.currentTime;
