@@ -34,7 +34,7 @@ function TrackItem({ title, artists, cover_img, audio_src, lyrics }) {
     <li>
       <div className={styles.tracks_item}>
         <div className={styles.tracks_item_cover}>
-          <Image src={cover_img} width={48} height={48} layout="fixed" />
+          <Image src={cover_img} layout="fill" objectFit="cover" />
           <div
             className={styles.tracks_item_cover_play}
             onClick={playTrackHandler}

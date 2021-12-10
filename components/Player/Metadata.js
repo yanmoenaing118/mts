@@ -8,7 +8,7 @@ export default function Metadata() {
   return (
     <div className={styles.metadata}>
       <div className={styles.metadata_cover}>
-        <Image src={coverImg} width={80} height={80} />
+        <Image src={coverImg} layout="fill" objectFit="cover" />
       </div>
       <div className={styles.metadata_info}>
         <h3>{title}</h3>
