@@ -1,5 +1,7 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 import editorReducer from "./editor";
+import settingReducer from "./setting";
+import unsplashReducer from "./unsplash";
 const songsSlice = createSlice({
   name: "songs",
 
@@ -768,5 +770,7 @@ export default configureStore({
     songs: songsSlice.reducer,
     player: playerSlice.reducer,
     editor: editorReducer,
+    setting: settingReducer,
+    theme: unsplashReducer,
   },
 });

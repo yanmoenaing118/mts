@@ -1,13 +1,22 @@
 import styles from "./../../styles/TranslationEditor.module.scss";
-import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
+import { VscChevronDown, VscChevronUp, VscClose } from "react-icons/vsc";
 import { useState } from "react";
+import { closeEditor } from "../../store/editor";
+import { useDispatch } from "react-redux";
 
 export default function TranslationEditor() {
   const languages = ["english", "korean", "japanese", "chinese"];
   const [showLanguages, setShowLanguages] = useState(false);
   const [translateInto, setTranslateInto] = useState("");
+  const dispatch = useDispatch();
   return (
     <div className={styles.translationEditor}>
+      <button
+        className={styles.translationEditor_close}
+        onClick={() => dispatch(closeEditor())}
+      >
+        <VscClose size={33} color="#ffff" />
+      </button>
       <div className={styles.translationEditor_wrapper}>
         <div className={styles.translationEditor_header}>
           {translateInto !== "" ? (

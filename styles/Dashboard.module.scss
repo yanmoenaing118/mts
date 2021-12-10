@@ -1,15 +1,14 @@
 $black: #000;
 $white: #fff;
 .dashboard {
-  background-color: $black;
-
-  background-image: linear-gradient(
-      to bottom,
-      rgba($black, 0.8),
-      rgba($black, 0.6)
-    ),
-    url("https://i.pinimg.com/originals/ee/47/dc/ee47dc6689af806b8ea2022c2da5cde3.jpg");
-
+  // background-image: linear-gradient(
+  //     to bottom,
+  //     rgba($black, 0.8),
+  //     rgba($black, 0.6)
+  //   ),
+  //   url(https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyODIxNDl8MHwxfHNlYXJjaHwxfHxmb3Jlc3R8ZW58MHx8fHwxNjM5MTI1OTYx&ixlib=rb-1.2.1&q=85);
+  background-repeat: no-repeat;
+  background-size: cover;
   &_wrapper {
     display: flex;
   }
@@ -173,5 +172,24 @@ $white: #fff;
     &:hover &_cover_play {
       opacity: 1;
     }
+  }
+}
+
+.settings {
+  margin-top: 30px;
+
+  &_togglebtn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding-left: 2em;
+    padding-top: 1.3em;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    span {
+      margin-left: 1em;
+    }
+    font-size: 1rem;
   }
 }

@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["resources.tidal.com", "myplaylist.vercel.app"],
+    domains: ["images.unsplash.com", "myplaylist.vercel.app"],
   },
 };

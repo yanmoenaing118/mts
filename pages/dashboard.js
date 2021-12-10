@@ -7,12 +7,14 @@ import Explore from "../components/Dashboard/Explore";
 import Artists from "../components/Dashboard/Artists";
 import DramaOsts from "../components/Dashboard/DramaOsts";
 import { useSelector } from "react-redux";
-import TranslationEditor from "../components/Dashboard/TranslationEditor";
+import TranslationEditor from "../components/TranslationEditor";
+import Setting from "../components/Setting";
 export default function index() {
   const isPlayerOpen = useSelector((state) => state.player.showPlayer);
   const playerSrc = useSelector((state) => state.player.src);
 
   const isEditorOpen = useSelector((state) => state.editor.show);
+  const isSettingOpen = useSelector((state) => state.setting.show);
 
   return (
     <BrowserRouter>
@@ -28,6 +30,7 @@ export default function index() {
           <Route path="drama-osts" element={<DramaOsts />} />
         </Routes>
       </Dashboard>
+      {isSettingOpen && <Setting />}
       {isEditorOpen && <TranslationEditor />}
       {isPlayerOpen && <Player src={playerSrc} />}
     </BrowserRouter>
