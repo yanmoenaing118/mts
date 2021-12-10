@@ -1,5 +1,6 @@
 import styles from "./../../styles/Player.module.scss";
 import { FaVolumeOff } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Actions({
   showLyric,
@@ -15,6 +16,20 @@ export default function Actions({
     const lang = e.target.textContent;
     setCurrentLanguage(lang);
   };
+
+  let translationOptions = avaliableLanguages.map((lang) => {
+    return (
+      <li key={lang} onClick={seeTranslation}>
+        {lang}
+      </li>
+    );
+  });
+  let addTranslationLink = (
+    <li className={styles.actions_addtran}>
+      <Link to="add-translation">translate</Link>
+    </li>
+  );
+  translationOptions.push(addTranslationLink);
   return (
     <div className={styles.actions}>
       <div>
@@ -22,15 +37,7 @@ export default function Actions({
           <span>Lyric</span>
         </button>
         <button className={styles.tran}>
-          <ul>
-            {avaliableLanguages.map((lang) => {
-              return (
-                <li key={lang} onClick={seeTranslation}>
-                  {lang}
-                </li>
-              );
-            })}
-          </ul>
+          <ul>{translationOptions}</ul>
           <span>Translation</span>
         </button>
         <button>
