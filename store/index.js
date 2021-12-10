@@ -1,5 +1,5 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
-
+import editorReducer from "./editor";
 const songsSlice = createSlice({
   name: "songs",
 
@@ -767,5 +767,6 @@ export default configureStore({
   reducer: {
     songs: songsSlice.reducer,
     player: playerSlice.reducer,
+    editor: editorReducer,
   },
 });

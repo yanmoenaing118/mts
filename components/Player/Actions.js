@@ -1,6 +1,8 @@
 import styles from "./../../styles/Player.module.scss";
 import { FaVolumeOff } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { openEditor } from "../../store/editor";
 
 export default function Actions({
   showLyric,
@@ -8,6 +10,7 @@ export default function Actions({
   avaliableLanguages,
   setCurrentLanguage,
 }) {
+  const dispatch = useDispatch();
   const showLyricHandler = () => {
     setShowLyric(!showLyric);
   };
@@ -25,8 +28,11 @@ export default function Actions({
     );
   });
   let addTranslationLink = (
-    <li className={styles.actions_addtran}>
-      <Link to="add-translation">translate</Link>
+    <li
+      className={styles.actions_addtran}
+      onClick={() => dispatch(openEditor())}
+    >
+      translate
     </li>
   );
   translationOptions.push(addTranslationLink);

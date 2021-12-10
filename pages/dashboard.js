@@ -11,6 +11,9 @@ import TranslationEditor from "../components/Dashboard/TranslationEditor";
 export default function index() {
   const isPlayerOpen = useSelector((state) => state.player.showPlayer);
   const playerSrc = useSelector((state) => state.player.src);
+
+  const isEditorOpen = useSelector((state) => state.editor.show);
+
   return (
     <BrowserRouter>
       <Head>
@@ -23,9 +26,9 @@ export default function index() {
           <Route path="explore" element={<Explore />} />
           <Route path="artists" element={<Artists />} />
           <Route path="drama-osts" element={<DramaOsts />} />
-          <Route path="add-translation" element={<TranslationEditor />} />
         </Routes>
       </Dashboard>
+      {isEditorOpen && <TranslationEditor />}
       {isPlayerOpen && <Player src={playerSrc} />}
     </BrowserRouter>
   );
