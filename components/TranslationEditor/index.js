@@ -3,6 +3,8 @@ import { VscChevronDown, VscChevronUp, VscClose } from "react-icons/vsc";
 import { useState } from "react";
 import { closeEditor } from "../../store/editor";
 import { useDispatch } from "react-redux";
+import EditorPlayer from "./EditorPlayer";
+import Translation from "./Translation";
 
 export default function TranslationEditor() {
   const languages = ["english", "korean", "japanese", "chinese"];
@@ -55,52 +57,14 @@ export default function TranslationEditor() {
         <div className={styles.editor}>
           <div className={styles.editor_left}>
             <div className={styles.editor_left_wrapper}>
-              <div className={styles.translation}>
-                <form className={styles.translation_textbox}>
-                  <textarea placeholder="..."></textarea>
-                </form>
-                <div className={styles.translation_timerange}>
-                  <div className={styles.translation_timerange_input}>
-                    <input
-                      type="number"
-                      className={styles.translation_timerange_input_min}
-                      placeholder="00"
-                      max={60}
-                      min={0}
-                    />
-
-                    <input
-                      type="number"
-                      className={styles.translation_timerange_input_sec}
-                      placeholder="00"
-                      max={60}
-                      min={0}
-                    />
-                  </div>
-                  <div className={styles.translation_timerange_input}>
-                    <input
-                      type="number"
-                      className={styles.translation_timerange_input_min}
-                      placeholder="00"
-                      max={60}
-                      min={0}
-                    />
-
-                    <input
-                      type="number"
-                      className={styles.translation_timerange_input_sec}
-                      placeholder="00"
-                      max={60}
-                      min={0}
-                    />
-                  </div>
-                </div>
-              </div>
+              <Translation />
             </div>
           </div>
 
           <div className={styles.editor_right}>
-            <div className={styles.editor_right_wrapper}></div>
+            <div className={styles.editor_right_wrapper}>
+              <EditorPlayer />
+            </div>
           </div>
         </div>
       </div>
