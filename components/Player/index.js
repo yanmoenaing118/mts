@@ -8,7 +8,6 @@ import Lyric from "./Lyric";
 import { useSelector } from "react-redux";
 
 export default function Player({ src }) {
-  const [currentTime, setCurrentTime] = useState(0);
   const [lyricParasPosition, setLyricParasPosition] = useState(0);
   const [activeLyric, setActiveLyric] = useState(null);
   const [showLyric, setShowLyric] = useState(false);
@@ -35,8 +34,6 @@ export default function Player({ src }) {
       <div className={styles.footerPlayer_wrapper}>
         <Metadata />
         <Audio
-          // lyrics={lyrics}
-          setCurrentTime={setCurrentTime}
           setLyricParasPosition={setLyricParasPosition}
           setActiveLyric={setActiveLyric}
           src={src}

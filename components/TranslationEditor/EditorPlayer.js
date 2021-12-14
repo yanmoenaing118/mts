@@ -26,8 +26,7 @@ export default function EditorPlayer() {
 
   const skip = (e) => {
     const pos = e.pageX - progressBarRef.current.getBoundingClientRect().left;
-    const { x, y, width, height } =
-      progressBarRef.current.getClientRects()["0"];
+    const { width } = progressBarRef.current.getClientRects()["0"];
     const toSkipPercent = (pos / width) * 100;
     audioRef.current.currentTime = (toSkipPercent / 100) * audioEndTime;
   };
@@ -44,8 +43,7 @@ export default function EditorPlayer() {
 
   const progressBarOnMouseMove = (e) => {
     const pos = e.pageX - progressBarRef.current.getBoundingClientRect().left;
-    const { x, y, width, height } =
-      progressBarRef.current.getClientRects()["0"];
+    const { width } = progressBarRef.current.getClientRects()["0"];
     const cursorPos = (pos / width) * 100;
     setShowCursor(true);
     setCursorPos(cursorPos);
