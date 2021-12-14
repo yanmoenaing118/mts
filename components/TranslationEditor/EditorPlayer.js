@@ -2,7 +2,7 @@ import { createRef, useState } from "react";
 import styles from "./../../styles/TranslationEditorPlayer.module.scss";
 import lib from "./../../lib";
 import { FaPause, FaPauseCircle, FaPlayCircle } from "react-icons/fa";
-export default function EditorPlayer() {
+export default function EditorPlayer({ lyric }) {
   const audioRef = createRef();
   const progressBarRef = createRef();
 
@@ -18,6 +18,7 @@ export default function EditorPlayer() {
     const currentTime = e.target.currentTime;
     setCurrentTime(currentTime);
     setProgressWidth((currentTime / audioEndTime) * 100);
+    lyric.forEach((l) => {});
   };
 
   const audioMetadataLoadedHandler = (e) => {

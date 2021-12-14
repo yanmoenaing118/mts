@@ -1,16 +1,14 @@
-import InputNumber from "rc-input-number/lib/InputNumber";
 import { useState } from "react";
 import styles from "./../../styles/TranslationEditor.module.scss";
 import { nanoid } from "@reduxjs/toolkit";
 
-export default function AddTranslation() {
+export default function AddTranslation({ setLyric }) {
   const [startMin, setStartMin] = useState(0);
   const [startSec, setStartSec] = useState(0);
   const [endMin, setEndMin] = useState(0);
   const [endSec, setEndSec] = useState(0);
   const [translatedText, setTranslatedText] = useState("");
-  const [lyric, setLyric] = useState([]);
-  console.log(lyric);
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
     console.log("start", startMin, startSec);
@@ -23,8 +21,9 @@ export default function AddTranslation() {
       endtime: `00:${endMin}:${endSec}`,
     };
 
-    const newLyric = lyric.concat(tran);
-    setLyric(newLyric);
+    setLyric(tran);
+    setStartMin(endMin);
+    setStartSec(endSec);
   };
   return (
     <div className={styles.addTranslation}>

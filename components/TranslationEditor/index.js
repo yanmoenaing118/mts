@@ -7,9 +7,12 @@ import Header from "./Header";
 import EditorPlayer from "./EditorPlayer";
 import EditorLyric from "./EditorLyric";
 import AddTranslation from "./AddTranslation";
+import { useState } from "react";
 
 export default function TranslationEditor() {
   const dispatch = useDispatch();
+  const [lyric, setLyric] = useState([]);
+
   return (
     <div className={styles.translationEditor}>
       <button
@@ -22,10 +25,15 @@ export default function TranslationEditor() {
         <Header />
         <div className={styles.translationEditor_main}>
           <div className={styles.translationEditor_editor}>
-            <EditorPlayer />
-            <AddTranslation />
+            <EditorPlayer lyric={lyric} />
+            <AddTranslation
+              setLyric={(tran) => {
+                const newLyric = lyric.concat(tran);
+                setLyric(newLyric);
+              }}
+            />
           </div>
-          <EditorLyric />
+          {/* <EditorLyric lyric={lyric} /> */}
         </div>
       </div>
     </div>
