@@ -4,15 +4,7 @@ import { BsFillSkipForwardFill, BsSkipBackwardFill } from "react-icons/bs";
 import { createRef, useState } from "react";
 import { useSelector } from "react-redux";
 
-function getTimeFormat(time) {
-  const currentMinute = Math.floor(time / 60);
-  const currentSecond = Math.floor(time % 60);
-  return (
-    currentMinute +
-    ":" +
-    (currentSecond < 10 ? "0" + currentSecond : currentSecond)
-  );
-}
+import lib from "../../lib";
 
 export default function Audio({ setLyricParasPosition, setActiveLyric, src }) {
   const [currentTime, setCurrentTime] = useState(0);
@@ -24,6 +16,10 @@ export default function Audio({ setLyricParasPosition, setActiveLyric, src }) {
   const lyrics = useSelector((state) => state.player.lyrics);
 
   const updateTimeHandler = (e) => {
+    if (lyrics.length == 0) {
+      return;
+    }
+
     const currentTime = e.target.currentTime;
     setCurrentTime(currentTime);
     setProgressWidth((currentTime / audioEndTime) * 100);
@@ -108,15 +104,8 @@ export default function Audio({ setLyricParasPosition, setActiveLyric, src }) {
           </button>
         </div>
         <div className={styles.player_progress}>
-          <span>{getTimeFormat(currentTime)}</span>
+          <span>{lib.getTimeFormat(currentTime)}</span>
           <div className={styles.player_progressbar} onClick={skipToHandler}>
-            {/* <div
-              className={styles.player_progressbar_cursor}
-              ref={progressCursor}
-              style={{
-                left: `${cursorPos}px`,
-              }}
-            ></div> */}
             <div
               className={styles.progress}
               style={{
@@ -124,7 +113,7 @@ export default function Audio({ setLyricParasPosition, setActiveLyric, src }) {
               }}
             ></div>
           </div>
-          <span>{getTimeFormat(audioEndTime)}</span>
+          <span>{lib.getTimeFormat(audioEndTime)}</span>
         </div>
       </div>
     </div>

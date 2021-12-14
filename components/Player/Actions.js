@@ -1,8 +1,9 @@
 import styles from "./../../styles/Player.module.scss";
 import { FaVolumeOff } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { openEditor } from "../../store/editor";
+import { setLyric } from "../../store/player";
 
 export default function Actions({
   showLyric,
@@ -11,13 +12,15 @@ export default function Actions({
   setCurrentLanguage,
 }) {
   const dispatch = useDispatch();
+  const player = useSelector((state) => state.player);
   const showLyricHandler = () => {
     setShowLyric(!showLyric);
   };
 
   const seeTranslation = (e) => {
     const lang = e.target.textContent;
-    setCurrentLanguage(lang);
+    // setCurrentLanguage(lang);
+    dispatch(setLyric({ lang }));
   };
 
   let translationOptions = avaliableLanguages.map((lang) => {

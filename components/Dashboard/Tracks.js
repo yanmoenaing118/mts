@@ -2,9 +2,17 @@ import styles from "./../../styles/Dashboard.module.scss";
 import { GrCirclePlay } from "react-icons/gr";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
-import { openPlayer, changePlayerSource } from "./../../store";
+import { openPlayer, changePlayerSource } from "./../../store/player";
 
-function TrackItem({ title, artists, cover_img, audio_src, lyrics }) {
+function TrackItem({
+  title,
+  artists,
+  cover_img,
+  audio_src,
+  lyrics,
+  translations,
+  original_lyrics,
+}) {
   const isPlayerOpen = useSelector((state) => state.player.showPlayer);
   const dispatch = useDispatch();
   const playTrackHandler = (e) => {
@@ -16,6 +24,8 @@ function TrackItem({ title, artists, cover_img, audio_src, lyrics }) {
           artists: artists,
           cover_img: cover_img,
           lyrics: lyrics,
+          translations: translations,
+          original_lyric: original_lyrics,
         })
       );
       return;
@@ -27,6 +37,8 @@ function TrackItem({ title, artists, cover_img, audio_src, lyrics }) {
         artists: artists,
         cover_img: cover_img,
         lyrics: lyrics,
+        translations: translations,
+        original_lyrics: original_lyrics,
       })
     );
   };

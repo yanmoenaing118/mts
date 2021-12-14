@@ -13,14 +13,14 @@ export default function Player({ src }) {
   const [activeLyric, setActiveLyric] = useState(null);
   const [showLyric, setShowLyric] = useState(false);
   const [lyricHeight, setLyricHeight] = useState(60);
-  const [currentLanguage, setCurrentLanguage] = useState("none");
+  const [currentLanguage, setCurrentLanguage] = useState("lyric");
 
-  let avaliableLanguages = useSelector(
-    (state) => state.player.lyrics[0].translations
+  let avaliableLanguages = useSelector((state) =>
+    state.player.translations ? state.player.translations : []
   );
 
   avaliableLanguages = Object.keys(avaliableLanguages);
-  avaliableLanguages.push("none");
+  avaliableLanguages.push("lyric");
 
   return (
     <div className={styles.footerPlayer}>

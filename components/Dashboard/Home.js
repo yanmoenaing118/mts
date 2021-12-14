@@ -11,6 +11,8 @@ export default function Home() {
       audio_src: song.src,
       cover_img: song.cover_img,
       lyrics: song.lyrics,
+      translations: song.translations,
+      original_lyrics: song.lyrics,
     };
   });
 
