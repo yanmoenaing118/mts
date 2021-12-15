@@ -13,7 +13,7 @@ export default function index() {
   const isPlayerOpen = useSelector((state) => state.player.showPlayer);
   const playerSrc = useSelector((state) => state.player.src);
 
-  const isEditorOpen = useSelector((state) => state.editor.show);
+  const isEditorOpen = useSelector((state) => state.songs.show);
   const isSettingOpen = useSelector((state) => state.setting.show);
 
   return (

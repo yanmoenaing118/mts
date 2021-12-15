@@ -95,8 +95,20 @@
   }
 }
 
-.lyric {
+.lyrics {
   width: 40%;
+
+  padding: 0.8em;
+
+  &_item {
+    &:first-child {
+      border-top: 1px solid #000;
+    }
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    padding: 0.2em;
+  }
 }
 
 .addTranslation {

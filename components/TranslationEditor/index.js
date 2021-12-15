@@ -1,17 +1,21 @@
 import styles from "./../../styles/TranslationEditor.module.scss";
 import { VscClose } from "react-icons/vsc";
 
-import { closeEditor } from "../../store/editor";
+import { closeEditor, saveTranslation } from "../../store/songs";
 import { useDispatch } from "react-redux";
 import Header from "./Header";
 import EditorPlayer from "./EditorPlayer";
 import EditorLyric from "./EditorLyric";
 import AddTranslation from "./AddTranslation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function TranslationEditor() {
   const dispatch = useDispatch();
   const [lyric, setLyric] = useState([]);
+
+  useEffect(() => {
+    console.log("rendering...");
+  });
 
   return (
     <div className={styles.translationEditor}>
@@ -33,7 +37,21 @@ export default function TranslationEditor() {
               }}
             />
           </div>
-          {/* <EditorLyric lyric={lyric} /> */}
+          <EditorLyric />
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              console.log("save tran");
+              dispatch(
+                saveTranslation({
+                  id: 2,
+                })
+              );
+            }}
+          >
+            save translation
+          </button>
         </div>
       </div>
     </div>

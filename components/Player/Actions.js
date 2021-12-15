@@ -2,7 +2,7 @@ import styles from "./../../styles/Player.module.scss";
 import { FaVolumeOff } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { openEditor } from "../../store/editor";
+import { openEditor } from "../../store/songs";
 import { setLyric } from "../../store/player";
 
 export default function Actions({
@@ -10,6 +10,7 @@ export default function Actions({
   setShowLyric,
   avaliableLanguages,
   setCurrentLanguage,
+  trackId,
 }) {
   const dispatch = useDispatch();
   const player = useSelector((state) => state.player);

@@ -2,7 +2,9 @@ import { createRef, useState } from "react";
 import styles from "./../../styles/TranslationEditorPlayer.module.scss";
 import lib from "./../../lib";
 import { FaPause, FaPauseCircle, FaPlayCircle } from "react-icons/fa";
-export default function EditorPlayer({ lyric }) {
+import { useSelector } from "react-redux";
+
+export default function EditorPlayer() {
   const audioRef = createRef();
   const progressBarRef = createRef();
 
@@ -13,12 +15,29 @@ export default function EditorPlayer({ lyric }) {
   const [cursorPos, setCursorPos] = useState(0);
   const [showCursor, setShowCursor] = useState(false);
   const [activeTime, setActiveTime] = useState(0);
+  const [activeLyric, setActiveLyric] = useState("");
+
+  const lyrics = useSelector((state) => state.songs.lyrics);
 
   const updateTimeHandler = (e) => {
     const currentTime = e.target.currentTime;
     setCurrentTime(currentTime);
     setProgressWidth((currentTime / audioEndTime) * 100);
-    lyric.forEach((l) => {});
+    lyrics.forEach((l) => {
+      const seekend = l.endtime;
+      const min = Number(seekend.split(":")[0]) * 60;
+      const sec = Number(seekend.split(":")[1]);
+      const seekendTimestamp = min + sec;
+
+      const seekTo = l.starttime;
+      const seekmin = Number(seekTo.split(":")[0]) * 60;
+      const seeksec = Number(seekTo.split(":")[1]);
+      const seekcurrentTime = seekmin + seeksec;
+
+      if (currentTime >= seekcurrentTime && currentTime <= seekendTimestamp) {
+        setActiveLyric(l.lyric);
+      }
+    });
   };
 
   const audioMetadataLoadedHandler = (e) => {
@@ -65,10 +84,7 @@ export default function EditorPlayer({ lyric }) {
         onLoadedMetadata={audioMetadataLoadedHandler}
       />
 
-      <div className={styles.editorPlayer_lyric}>
-        The wind speaks with your tone. The wind speaks with your tone.The wind
-        speaks with your tone
-      </div>
+      <div className={styles.editorPlayer_lyric}>{activeLyric}</div>
 
       <div className={styles.editorPlayer_duration}>
         <div>{lib.getTimeFormat(currentTime)}</div>
