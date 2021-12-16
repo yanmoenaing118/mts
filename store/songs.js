@@ -406,9 +406,25 @@ const songsSlice = createSlice({
         cover_img:
           "https://myplaylist.vercel.app/static/media/elod.852037c1.png",
         lyrics: [],
+        translations: {},
+      },
+      {
+        id: "3",
+        title: "This Love",
+        artists: "Davichi",
+        src: "https://myplaylist.vercel.app/static/media/this_love.9977ade1.mp3",
+        cover_img:
+          "https://myplaylist.vercel.app/static/media/dst.6ac8d29d.jpeg",
+        lyrics: [],
+        translations: {},
       },
     ],
   },
 });
+
+export const selectASong = (state, id) => {
+  const song = state.songs.songs.find((song) => song.id === id);
+  return song;
+};
 
 export default songsSlice.reducer;

@@ -14,6 +14,7 @@ export default function AddTranslation() {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
+    console.log("submi");
     dispatch(submitALyric());
   };
   return (
@@ -37,9 +38,14 @@ export default function AddTranslation() {
               <EndSecInput />
             </div>
           </div>
-          <div>
-            <input type="submit" />
-          </div>
+        </div>
+        <div>
+          <input
+            type="submit"
+            style={{
+              display: "none",
+            }}
+          />
         </div>
       </form>
     </div>

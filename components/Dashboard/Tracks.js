@@ -3,7 +3,6 @@ import { GrCirclePlay } from "react-icons/gr";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { openPlayer, changePlayerSource } from "./../../store/player";
-import { setCurrentSong } from "./../../store/songs";
 
 function TrackItem({
   title,
@@ -19,7 +18,6 @@ function TrackItem({
   const dispatch = useDispatch();
   const playTrackHandler = (e) => {
     if (!isPlayerOpen) {
-      dispatch(setCurrentSong(id));
       dispatch(
         openPlayer({
           src: audio_src,

@@ -22,6 +22,9 @@ const translationEditorSlice = createSlice({
     closeEditor: (state) => {
       state.show = false;
     },
+    setLanguage: (state, action) => {
+      state.language = action.payload;
+    },
     setInput: (state, action) => {
       const { inputType, value } = action.payload;
       switch (inputType) {
@@ -64,6 +67,7 @@ const translationEditorSlice = createSlice({
 export const {
   openEditor,
   closeEditor,
+  setLanguage,
   setInput,
   setInputText,
   submitALyric,

@@ -4,9 +4,11 @@ import lib from "./../../lib";
 import { FaPause, FaPauseCircle, FaPlayCircle } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
-export default function EditorPlayer() {
+export default function EditorPlayer({ src }) {
   const audioRef = createRef();
   const progressBarRef = createRef();
+
+  const activeRef = createRef();
 
   const [currentTime, setCurrentTime] = useState(0);
   const [audioEndTime, setAudioEndTime] = useState(0);
@@ -65,7 +67,7 @@ export default function EditorPlayer() {
     const pos = e.pageX - progressBarRef.current.getBoundingClientRect().left;
     const { width } = progressBarRef.current.getClientRects()["0"];
     const cursorPos = (pos / width) * 100;
-    setShowCursor(true);
+    // setShowCursor(true);
     setCursorPos(cursorPos);
     setActiveTime((cursorPos / 100) * audioEndTime);
   };
@@ -73,7 +75,7 @@ export default function EditorPlayer() {
   return (
     <div className={styles.editorPlayer}>
       <audio
-        src="https://myplaylist.vercel.app/static/media/for_one_person.20cab8c7.mp3"
+        src={src}
         controls
         onTimeUpdate={updateTimeHandler}
         loop
@@ -90,6 +92,7 @@ export default function EditorPlayer() {
         <div>{lib.getTimeFormat(currentTime)}</div>
         <div>{lib.getTimeFormat(audioEndTime)}</div>
         <div
+          ref={activeRef}
           className={styles.editorPlayer_duration_active}
           style={{
             left: `${cursorPos}%`,
@@ -102,10 +105,10 @@ export default function EditorPlayer() {
       <div
         className={styles.editorPlayer_progress}
         onMouseMove={progressBarOnMouseMove}
-        onMouseOver={() => setShowCursor(true)}
-        onMouseOut={() => setShowCursor(false)}
         onClick={skip}
         ref={progressBarRef}
+        onMouseEnter={(e) => (activeRef.current.style.display = "block")}
+        onMouseLeave={(e) => (activeRef.current.style.display = "none")}
       >
         <div
           className={styles.editorPlayer_progress_current}
@@ -117,9 +120,9 @@ export default function EditorPlayer() {
 
       <div className={styles.editorPlayer_play} onClick={playPauseHandler}>
         {playing ? (
-          <FaPauseCircle size={30} color="red" />
+          <FaPauseCircle size={30} color="#fff" />
         ) : (
-          <FaPlayCircle size={30} color="red" />
+          <FaPlayCircle size={30} color="#fff" />
         )}
       </div>
     </div>

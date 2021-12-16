@@ -1,19 +1,24 @@
 import { VscChevronDown, VscChevronUp, VscClose } from "react-icons/vsc";
 import { useState } from "react";
 import styles from "./../../styles/TranslationEditor.module.scss";
+import { useSelector } from "react-redux";
+import { setLanguage } from "../../store/editor";
+import { useDispatch } from "react-redux";
 export default function Header() {
+  const dispatch = useDispatch();
   const [showLanguages, setShowLanguages] = useState(false);
-  const [translateInto, setTranslateInto] = useState("");
+  const language = useSelector((state) => state.editor.language);
   const languages = ["english", "korean", "japanese", "chinese"];
+  console.log(language);
   return (
     <div className={styles.translationEditor_header}>
-      {translateInto !== "" ? (
+      {language !== "" ? (
         <h1
           style={{
             textTransform: "capitalize",
           }}
         >
-          {translateInto}
+          {language}
         </h1>
       ) : (
         <h1>Add Translation</h1>
@@ -32,7 +37,7 @@ export default function Header() {
         <ul className={styles.translationEditor_langs}>
           {languages.map((lang) => {
             return (
-              <li key={lang} onClick={() => setTranslateInto(lang)}>
+              <li key={lang} onClick={() => dispatch(setLanguage(lang))}>
                 {lang}
               </li>
             );
