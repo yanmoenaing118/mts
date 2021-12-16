@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setInput } from "./../../../store/songs";
+import { setInput } from "./../../../store/editor";
 
 export default function StartSecInput() {
   const dispatch = useDispatch();
-  const startSec = useSelector((state) => state.songs.input.startSec);
+  const startSec = useSelector((state) => state.editor.input.startSec);
   console.log(startSec);
   return (
     <input

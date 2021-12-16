@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setInputText } from "./../../../store/songs";
+import { setInputText } from "./../../../store/editor";
 
 import styles from "./../../../styles/TranslationEditor.module.scss";
 
 export default function TextInput() {
   const dispatch = useDispatch();
-  const text = useSelector((state) => state.songs.inputText);
+  const text = useSelector((state) => state.editor.inputText);
   // const [tem, setTemp] = useState("");
 
   return (

@@ -11,11 +11,12 @@ const playerSlice = createSlice({
     lyrics: [],
     original_lyrics: [], // to keep the lyric
     translations: null,
+    trackId: "",
   },
   reducers: {
     openPlayer: (state, action) => {
       state.showPlayer = true;
-      const { src, title, artists, cover_img, lyrics, translations } =
+      const { src, title, artists, cover_img, lyrics, translations, trackId } =
         action.payload;
       state.src = src;
       state.title = title;
@@ -24,12 +25,13 @@ const playerSlice = createSlice({
       state.lyrics = lyrics;
       state.translations = translations;
       state.original_lyrics = lyrics;
+      state.trackId = trackId;
     },
     closePlayer: (state) => {
       state.showPlayer = false;
     },
     changePlayerSource: (state, action) => {
-      const { src, title, artists, cover_img, lyrics, translations } =
+      const { src, title, artists, cover_img, lyrics, translations, trackId } =
         action.payload;
       state.src = src;
       state.title = title;
@@ -38,6 +40,7 @@ const playerSlice = createSlice({
       state.lyrics = lyrics;
       state.translations = translations;
       state.original_lyrics = lyrics;
+      state.trackId = trackId;
     },
     setLyric: (state, action) => {
       // switch between original lyrics and translations

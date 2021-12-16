@@ -17,6 +17,7 @@ export default function Player({ src }) {
   let avaliableLanguages = useSelector((state) =>
     state.player.translations ? state.player.translations : []
   );
+  const trackId = useSelector((state) => state.player.trackId);
 
   avaliableLanguages = Object.keys(avaliableLanguages);
   avaliableLanguages.push("lyric");
@@ -43,6 +44,7 @@ export default function Player({ src }) {
           showLyric={showLyric}
           setCurrentLanguage={setCurrentLanguage}
           avaliableLanguages={avaliableLanguages}
+          trackId={trackId}
         />
       </div>
     </div>

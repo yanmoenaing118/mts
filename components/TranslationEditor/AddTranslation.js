@@ -7,7 +7,7 @@ import EndMinInput from "./AddTranslationComponents/EndMinInput";
 import EndSecInput from "./AddTranslationComponents/EndSecInput";
 import TextInput from "./AddTranslationComponents/TextInput";
 import { useDispatch } from "react-redux";
-import { submitALyric } from "../../store/songs";
+import { submitALyric } from "../../store/editor";
 
 export default function AddTranslation() {
   const dispatch = useDispatch();

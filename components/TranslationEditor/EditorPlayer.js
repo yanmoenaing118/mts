@@ -17,7 +17,7 @@ export default function EditorPlayer() {
   const [activeTime, setActiveTime] = useState(0);
   const [activeLyric, setActiveLyric] = useState("");
 
-  const lyrics = useSelector((state) => state.songs.lyrics);
+  const lyrics = useSelector((state) => state.editor.lyrics);
 
   const updateTimeHandler = (e) => {
     const currentTime = e.target.currentTime;

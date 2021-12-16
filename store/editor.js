@@ -2,9 +2,10 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const translationEditorSlice = createSlice({
   name: "editor",
-  language: "",
+
   initialState: {
     show: false,
+    language: "",
     input: {
       startMin: "00",
       startSec: "00",
@@ -54,10 +55,19 @@ const translationEditorSlice = createSlice({
       state.input.startSec = state.input.endSec;
       state.lyrics.push(lyric);
     },
+    saveTranslation: (state) => {
+      return state;
+    },
   },
 });
 
-export const { openEditor, closeEditor, setInput, setInputText, submitALyric } =
-  translationEditorSlice.actions;
+export const {
+  openEditor,
+  closeEditor,
+  setInput,
+  setInputText,
+  submitALyric,
+  saveTranslation,
+} = translationEditorSlice.actions;
 
 export default translationEditorSlice.reducer;

@@ -1,7 +1,7 @@
 import styles from "./../../styles/TranslationEditor.module.scss";
 import { VscClose } from "react-icons/vsc";
 
-import { closeEditor, saveTranslation } from "../../store/songs";
+import { closeEditor } from "../../store/editor";
 import { useDispatch } from "react-redux";
 import Header from "./Header";
 import EditorPlayer from "./EditorPlayer";
@@ -40,18 +40,7 @@ export default function TranslationEditor() {
           <EditorLyric />
         </div>
         <div>
-          <button
-            onClick={() => {
-              console.log("save tran");
-              dispatch(
-                saveTranslation({
-                  id: 2,
-                })
-              );
-            }}
-          >
-            save translation
-          </button>
+          <button>save translation</button>
         </div>
       </div>
     </div>

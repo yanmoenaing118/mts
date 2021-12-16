@@ -1,6 +1,6 @@
 import styles from "./../../styles/Player.module.scss";
 import { FaVolumeOff } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { openEditor } from "../../store/songs";
 import { setLyric } from "../../store/player";
@@ -32,11 +32,15 @@ export default function Actions({
     );
   });
   let addTranslationLink = (
-    <li
-      className={styles.actions_addtran}
-      onClick={() => dispatch(openEditor())}
-    >
-      translate
+    <li>
+      <Link
+        href={{
+          pathname: "/translate",
+          query: { trackId: encodeURIComponent(trackId) },
+        }}
+      >
+        <a>translate</a>
+      </Link>
     </li>
   );
   translationOptions.push(addTranslationLink);

@@ -29,6 +29,7 @@ function TrackItem({
           lyrics: lyrics,
           translations: translations,
           original_lyric: original_lyrics,
+          trackId: id,
         })
       );
       return;
@@ -42,6 +43,7 @@ function TrackItem({
         lyrics: lyrics,
         translations: translations,
         original_lyrics: original_lyrics,
+        trackId: id,
       })
     );
   };

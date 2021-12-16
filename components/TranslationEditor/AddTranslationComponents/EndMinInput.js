@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setInput } from "./../../../store/songs";
+import { setInput } from "./../../../store/editor";
 
 export default function EndMinInput() {
   const dispatch = useDispatch();
-  const endMin = useSelector((state) => state.songs.input.endMin);
+  const endMin = useSelector((state) => state.editor.input.endMin);
 
   return (
     <input

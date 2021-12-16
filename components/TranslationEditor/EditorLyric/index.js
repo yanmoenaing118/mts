@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import styles from "./../../../styles/TranslationEditor.module.scss";
 
 export default function EditorLyric() {
-  const lyrics = useSelector((state) => state.songs.lyrics);
+  const lyrics = useSelector((state) => state.editor.lyrics);
 
   const renderLyrics = () => {
     if (lyrics.length === 0) return;
